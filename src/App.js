@@ -1,25 +1,50 @@
-import logo from './logo.svg';
-import './App.css';
+//import { Modal } from "./modals/modal";
+//import { SplitScreen } from "./SplitScreen";
+
+// const LeftSide = ({ name }) => {
+//   return <h1 style={{ backgroundColor: 'red' }}>Hello World! {name}</h1>
+// }
+
+// const RightSide = () => {
+//   return <p style={{ backgroundColor: 'green' }}>This is a the text area</p>
+// }
+
+// const ModalContent = () => {
+//   return (
+//     <>
+//       <h3>This is product infomation</h3>
+//       <p>Product Name: PROPRO</p>
+//       <p>Model: XPA-123A</p>
+//       <p>Product descrption: This is a the text area</p>
+//     </>
+//   )
+// }
+
+import { CurrentUserLoader } from "./users/CurrentUserLoader";
+import { UserInfo } from './users/UserInfo'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+
+    // <SplitScreen leftWeight={1} rightWeight={3}>
+    //   <LeftSide name={"SHit"} />
+    //   <RightSide />
+    // </SplitScreen>
+
+    <>
+      {/* <Modal>
+        <ModalContent />
+      </Modal> */}
+
+      <CurrentUserLoader>
+        <UserInfo />
+      </CurrentUserLoader>
+    </>
+
+
   );
 }
+
 
 export default App;
